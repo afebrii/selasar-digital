@@ -1,5 +1,8 @@
 @extends('layouts.frontend')
 
+@section('title', 'Selasar Digital - Custom Software & Web Development Agency')
+@section('meta_description', 'Selasar Digital provides premium web development, mobile apps, and UI/UX design. Partner with us to accelerate your business growth through technology.')
+
 @section('content')
 
     <!-- HERO SECTION -->

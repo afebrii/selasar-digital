@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Selasar Digital') }} - Premium Software House</title>
+    <title>@yield('title', config('app.name', 'Selasar Digital') . ' - Premium Software House')</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+    <meta name="description"
+        content="@yield('meta_description', 'Selasar Digital is a premium software house located in Indonesia, specializing in cutting-edge web development, mobile applications, and UI/UX design.')">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title"
+        content="@yield('title', config('app.name', 'Selasar Digital') . ' - Premium Software House')">
+    <meta property="og:description"
+        content="@yield('meta_description', 'Selasar Digital is a premium software house located in Indonesia, specializing in cutting-edge web development, mobile applications, and UI/UX design.')">
+    <meta property="og:type" content="@yield('meta_type', 'website')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="Selasar Digital">
+
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

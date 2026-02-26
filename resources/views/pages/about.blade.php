@@ -1,5 +1,8 @@
 @extends('layouts.frontend')
 
+@section('title', 'About Us - Selasar Digital')
+@section('meta_description', 'Learn about Selasar Digital, our mission to bridge complex business challenges with elegant technological solutions, and the core values that drive our team.')
+
 @section('content')
 
     <!-- PAGE HEADER -->

@@ -1,5 +1,8 @@
 @extends('layouts.frontend')
 
+@section('title', 'Our Services - Web, Mobile & Cloud Solutions | Selasar Digital')
+@section('meta_description', 'Explore Selasar Digital\'s comprehensive digital services, including custom web development, intuitive mobile apps, modern UI/UX design, and scalable cloud architecture.')
+
 @section('content')
 
     <!-- PAGE HEADER -->

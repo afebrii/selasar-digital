@@ -1,5 +1,8 @@
 @extends('layouts.frontend')
 
+@section('title', 'Contact Us - Start Your Project | Selasar Digital')
+@section('meta_description', 'Get in touch with Selasar Digital. Let\'s discuss your next custom software, web, or mobile application project. We are ready to help you innovate.')
+
 @section('content')
 
     <!-- PAGE HEADER -->

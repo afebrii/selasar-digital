@@ -1,5 +1,11 @@
 @extends('layouts.frontend')
 
+@section('title', $project->title . ' - Case Study | Selasar Digital')
+@section('meta_description', Str::limit(strip_tags($project->description ?? $project->challenge ?? 'Explore this custom digital solution developed by Selasar Digital.'), 160))
+@if($project->image)
+@section('meta_image', asset('storage/' . $project->image))
+@endif
+
 @section('content')
 
     <!-- HERO SECTION -->
@@ -57,11 +63,11 @@
                     @if(count($allImages) > 0)
                         <!-- Carousel Component -->
                         <div x-data="{ 
-                                                                                                                        activeSlide: 0, 
-                                                                                                                        slides: {{ json_encode($allImages) }},
-                                                                                                                        next() { this.activeSlide = this.activeSlide === this.slides.length - 1 ? 0 : this.activeSlide + 1 },
-                                                                                                                        prev() { this.activeSlide = this.activeSlide === 0 ? this.slides.length - 1 : this.activeSlide - 1 }
-                                                                                                                    }"
+                                                                                                                                activeSlide: 0, 
+                                                                                                                                slides: {{ json_encode($allImages) }},
+                                                                                                                                next() { this.activeSlide = this.activeSlide === this.slides.length - 1 ? 0 : this.activeSlide + 1 },
+                                                                                                                                prev() { this.activeSlide = this.activeSlide === 0 ? this.slides.length - 1 : this.activeSlide - 1 }
+                                                                                                                            }"
                             class="relative max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl mb-12 border border-gray-100 group w-full bg-gray-100">
 
                             <!-- Main Slider -->
@@ -161,7 +167,8 @@
                                         <div
                                             class="bg-[#0F172A] rounded-2xl p-8 text-white text-center flex flex-col justify-center">
                                             <div class="text-4xl font-bold text-[#2563EB] mb-2">
-                                                {{ $project->efficiency_improvement }}</div>
+                                                {{ $project->efficiency_improvement }}
+                                            </div>
                                             <div class="text-sm text-gray-300 uppercase tracking-widest">Peningkatan Efisiensi</div>
                                         </div>
                                     @endif

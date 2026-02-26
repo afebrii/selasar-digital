@@ -20,12 +20,12 @@ This todolist outlines the development steps from backend dashboard creation to 
 - [x] Setup Authentication (Laravel Breeze)
 - [x] Dashboard UI/UX (Responsive Admin layout, Sidebar, Theme)
 - [x] CRUD Operations (Services, Project Categories, Portfolio, Testimonials, Inquiries) dashboard layout (Sidebar, Navbar, main content area) using a calm, elegant theme.
-- [ ] **CRUD Operations (Content Management)**
-  - [ ] **Services Module:** Create, Read, Update, Delete core services.
-  - [ ] **Project Categories Module:** Manage categories (Web, Mobile, UI/UX).
-  - [ ] **Portfolio Module:** Manage projects, upload images, assign categories, define tech stacks, and toggle 'featured' status.
-  - [ ] **Testimonials Module:** Add, edit, and approve client feedback.
-  - [ ] **Inquiries Module:** View and manage contact form submissions.
+- [x] **CRUD Operations (Content Management)**
+  - [x] **Services Module:** Create, Read, Update, Delete core services.
+  - [x] **Project Categories Module:** Manage categories (Web, Mobile, UI/UX).
+  - [x] **Portfolio Module:** Manage projects, upload images, assign categories, define tech stacks, and toggle 'featured' status.
+  - [x] **Testimonials Module:** Add, edit, and approve client feedback.
+  - [x] **Inquiries Module:** View and manage contact form submissions.
 
 ## Phase 3: Landing Page & Frontend Development
 - [x] **Global Styling & Layouts**

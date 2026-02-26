@@ -1,5 +1,8 @@
 @extends('layouts.frontend')
 
+@section('title', 'Our Portfolio - Digital Products We\'ve Built | Selasar Digital')
+@section('meta_description', 'Explore Selasar Digital\'s portfolio of past projects. We have crafted innovative web and mobile solutions for clients across various industries.')
+
 @section('content')
 
     <!-- PAGE HEADER -->
@@ -47,8 +50,7 @@
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95"
                         class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full border border-gray-100 {{ $project->is_featured ? 'ring-2 ring-blue-100' : '' }}"
-                        style="display: none;" <!-- Pre-hide to let Alpine handle the initial display -->
-                        >
+                        style="display: none;">
 
                         <!-- Image -->
                         <div class="aspect-square w-full overflow-hidden bg-gray-100 relative">
@@ -78,28 +80,35 @@
                         <!-- Content -->
                         <div class="p-8 flex-grow flex flex-col">
                             <h3 class="text-2xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">
-                                {{ $project->title }}</h3>
+                                {{ $project->title }}
+                            </h3>
                             <p class="text-gray-600 mb-6 flex-grow">{{ $project->description }}</p>
 
-                            @if(!empty($project->tech_stack))
-                                <div class="pt-6 border-t border-gray-100 mt-auto">
-                                    <h4 class="text-xs font-semibold text-gray-500 tracking-wider uppercase mb-3">Technologies Used
-                                    </h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        @foreach(is_array($project->tech_stack) ? $project->tech_stack : explode(',', $project->tech_stack) as $tech)
-                                            <span
-                                                class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-xs font-medium">
-                                                {{ trim($tech) }}
-                                            </span>
-                                        @endforeach
-                                    </div>
+                            {{-- @if(!empty($project->tech_stack))
+                            <div class="pt-6 border-t border-gray-100 mt-auto">
+                                <h4 class="text-xs font-semibold text-gray-500 tracking-wider uppercase mb-3">Technologies Used
+                                </h4>
+                                <div class="flex flex-wrap gap-2">
+                                    @foreach(is_array($project->tech_stack) ? $project->tech_stack : explode(',',
+                                    $project->tech_stack) as $tech)
+                                    <span
+                                        class="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-xs font-medium">
+                                        {{ trim($tech) }}
+                                    </span>
+                                    @endforeach
                                 </div>
-                            @endif
+                            </div>
+                            @endif --}}
 
-                            <div class="mt-8 pt-6 border-t border-gray-100 mt-auto">
-                                <a href="{{ route('portfolio.show', $project->slug) }}" class="inline-flex items-center justify-center w-full px-4 py-3 bg-gray-50 hover:bg-[#2563EB] text-[#0F172A] hover:text-white border border-gray-200 hover:border-transparent text-sm font-semibold rounded-xl transition-all duration-300">
+                            <div class="mt-auto pt-4 border-t border-gray-100">
+                                <a href="{{ route('portfolio.show', $project->slug) }}"
+                                    class="inline-flex items-center text-sm font-semibold text-[#0F172A] group-hover:text-[#2563EB] transition-colors">
                                     View Case Study
-                                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
                                 </a>
                             </div>
                         </div>
